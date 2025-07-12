@@ -1,0 +1,18 @@
+/* app.css (o el CSS donde importas Tailwind) */
+@import "tailwindcss";                /* requisito nuevo en v4 */
+
+.section-config {
+  /* 1 ✧ utilidades sin variante */
+  @apply grid grid-cols-1 gap-4 p-3
+         bg-[url('/fondocuadros.svg')] bg-contain bg-center;
+  background-repeat: no-repeat, repeat;
+}
+
+/* 2 ✧ utilidades con variante  ➜  envueltas en @variant */
+@variant md {
+  .section-config { @apply grid-cols-3; }
+}
+
+@variant lg {
+  .section-config { @apply grid-cols-4; }
+}

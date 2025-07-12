@@ -1,0 +1,27 @@
+model Test1DocumentTypeModel {
+  id              String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name            String
+  isDefault       Boolean @default(false) @map("is_default")
+
+  companyId       String @map("company_id") @db.Uuid
+
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime? @map("updated_at")
+
+  @@map("test1_document_types")
+  @@unique([name, companyId])
+}
+
+model Test1DocumentType2Model {
+  id              String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name            String
+  isDefault       Boolean @default(false) @map("is_default")
+
+  companyId       String @map("company_id") @db.Uuid
+
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime? @map("updated_at")
+
+  @@map("test1_document_types_2")
+  @@unique([name, companyId])
+}
