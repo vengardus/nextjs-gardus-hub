@@ -93,7 +93,7 @@ const uploadImages = async (
 
         return cloudinary.uploader
           .upload(`data:image/png;base64,${base64Image}`, {
-            folder: "pos/companies",
+            folder: "gardus-hub/companies",
           })
           .then((r) => r.secure_url);
       } catch (error) {
