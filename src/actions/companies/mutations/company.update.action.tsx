@@ -8,6 +8,8 @@ import type { Company } from "@/types/interfaces/company/company.interface";
 import { getActionError } from "@/utils/errors/get-action-error";
 import { initResponseAction } from "@/utils/response/init-response-action";
 import { getImagePublicIdFromCloudinary } from "@/utils/media/cloudinary.utils";
+import App from "next/app";
+import { AppConstants } from "@/constants/app.constants";
 
 // Configuration Cloudinary
 cloudinary.config(process.env.CLOUDINARY_URL ?? "");
@@ -93,7 +95,7 @@ const uploadImages = async (
 
         return cloudinary.uploader
           .upload(`data:image/png;base64,${base64Image}`, {
-            folder: "gardus-hub/companies",
+            folder: `${AppConstants.CLOUDINARY_FOLDER_BASE}/companies`,
           })
           .then((r) => r.secure_url);
       } catch (error) {

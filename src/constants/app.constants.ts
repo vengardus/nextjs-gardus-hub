@@ -7,6 +7,7 @@ export class AppConstants {
   static URL_HOME = "/";
   static PROFILE_NAME_NAV = "profile";
   static LOGIN_NAME_NAV = "login";
+  static CLOUDINARY_FOLDER_BASE = "gardus-hub";
 
   static DEFAULT_VALUES = {
     currencySymbol: "S/.",
