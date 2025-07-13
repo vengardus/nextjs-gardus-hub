@@ -8,7 +8,6 @@ import type { Company } from "@/types/interfaces/company/company.interface";
 import { getActionError } from "@/utils/errors/get-action-error";
 import { initResponseAction } from "@/utils/response/init-response-action";
 import { getImagePublicIdFromCloudinary } from "@/utils/media/cloudinary.utils";
-import App from "next/app";
 import { AppConstants } from "@/constants/app.constants";
 
 // Configuration Cloudinary
