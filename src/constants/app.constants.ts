@@ -3,7 +3,7 @@ import type { NavbarItem } from "@/types/interfaces/common/navbar-item.interface
 import { ModuleEnum } from "@/types/enums/module.enum";
 
 export class AppConstants {
-  static APP_NAME = "GardusHub-EF2R";
+  static APP_NAME = "GardusHub-EFR2";
   static URL_HOME = "/";
   static PROFILE_NAME_NAV = "profile";
   static LOGIN_NAME_NAV = "login";
