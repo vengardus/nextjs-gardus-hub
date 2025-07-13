@@ -9,7 +9,7 @@ import { checkAuthenticationAndPermission } from "@/services/auth/check-authenti
 export default async function CompaniesGeneralPage() {
   // Verify user authentication and permission
   const authenticatationAndPermissionResponse = await checkAuthenticationAndPermission(
-    ModuleEnum.pos
+    ModuleEnum.company
   );
   if (!authenticatationAndPermissionResponse.isAuthenticated)
     return <ShowPageMessage customMessage={authenticatationAndPermissionResponse.errorMessage} />;
